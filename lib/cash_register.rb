@@ -22,15 +22,15 @@ attr_accessor :total, :discount
       if quantity
       @total += (price * quantity)
 
-      i = 0
-      while i < quantity do
-           @item_array << title
-           i = i + 1
-      end
+      # i = 0
+      # while i < quantity do
+      #      @item_array << title
+      #      i = i + 1
+      # end
 
     else
       @total += price
-       @item_array << title
+     @item_array << title
     end
   end
 
@@ -48,12 +48,13 @@ attr_accessor :total, :discount
     end
 
     def items
-        # self.add_item(@item, @price, @quantity)
-        # i = 0
-        # while i < @quantity do
-        #      @item_array << @title
-        #      i = i + 1
-        # end
+
+      i = 0
+
+      while i < @quantity do
+           @item_array << @title
+           i = i + 1
+      end
       @item_array
 
     end
